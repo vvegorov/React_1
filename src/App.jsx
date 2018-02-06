@@ -11,7 +11,7 @@ function App() {
       <Welcome name="Saraweweasasdd" />
       <Welcome name="Cahalasads" />
       <Welcome name="Editessdsdf" />
-      <Welcome name="Editsdsfessdsdf" />
+      
     </div>
   );
 }
