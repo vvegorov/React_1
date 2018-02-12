@@ -13,6 +13,10 @@ module.exports = {
         test: /\.jsx$/, // absolute path to component
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.scss$/, // absolute path to component
+        loaders: ["style-loader","css-loader","sass-loader"]
       }
     ]
   },

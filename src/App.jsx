@@ -1,22 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Component from './Component';
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
+import './styles.scss';
 
-function App() {
+function App(props) {
+  console.log(props);
   return (
-    <div>
-      <Welcome name="Saraweweasasdd" />
-      <Welcome name="Cahalasads" />
-      <Welcome name="Editessdsdf" />
-      
-    </div>
+    <main>
+      <header>
+        <h1>{props.title}</h1>
+      </header>
+      <section className="todo-list">
+        <div className="todo completed">
+          <button className="checkbox icon">
+            <i className="material-icons">check_box</i>
+          </button>
+          <span className="todo-title">Изучить реакт1</span>
+          <button className="delete icon">
+            <i className="material-icons">delete</i>
+          </button>
+        </div>
+        <div className="todo">
+          <button className="checkbox icon">
+            <i className="material-icons">check_box_outline_blank</i>
+          </button>
+          <span className="todo-title">Изучить реакт2</span>
+          <button className="delete icon">
+            <i className="material-icons">delete</i>
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+  <App title = "REASDFRT!!!"/>, document.getElementById('root'));
