@@ -2,37 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Component from './Component';
 import './styles.scss';
-
+import Header from './components/Header';
+import Todo from './components/Todo';
 function App(props) {
-  console.log(props);
+
   return (
     <main>
-      <header>
-        <h1>{props.title}</h1>
-      </header>
+      <Header title={props.title}/>
       <section className="todo-list">
-        <div className="todo completed">
-          <button className="checkbox icon">
-            <i className="material-icons">check_box</i>
-          </button>
-          <span className="todo-title">Изучить реакт1</span>
-          <button className="delete icon">
-            <i className="material-icons">delete</i>
-          </button>
-        </div>
-        <div className="todo">
-          <button className="checkbox icon">
-            <i className="material-icons">check_box_outline_blank</i>
-          </button>
-          <span className="todo-title">Изучить реакт2</span>
-          <button className="delete icon">
-            <i className="material-icons">delete</i>
-          </button>
-        </div>
+        <Todo title={"Изучить JS"} completed={true}/>
+        <Todo title={"Изучить React"} completed={false}/>
       </section>
     </main>
   );
 }
 
+App.defaultProps = {
+  title: "REACT TODO"
+};
 ReactDOM.render(
-  <App title = "REASDFRT!!!"/>, document.getElementById('root'));
+  <App/>, document.getElementById('root'));
