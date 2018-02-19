@@ -8,26 +8,54 @@ body {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 24px;
+  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-  direction: ltr; /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased; /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility; /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale; /* Support for IE. */
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
   font-feature-settings: 'liga';
 }
 
 div.todo {
-  width: 300px;
-  margin: auto auto 10px;
+  width: 500px;
+  margin: 0 auto 5px;
   padding: 5px;
   background: #FFE4B5;
   border: 4px double #00FFFF;
+  border-radius: 5px 5px 5px 5px;
+}
+
+div.todo.completed {
+  background: #E0FFFF;
+}
+
+div.centr {
+  width: 10%;
+  display: inline-block;
+  text-align: left;
+}
+
+div.centr1 {
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+}
+
+div.centr2 {
+  width: 10%;
+  display: inline-block;
+  text-align: right;
 }
 
 span {
